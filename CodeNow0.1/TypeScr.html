@@ -1,0 +1,137 @@
+﻿﻿<reference path="Scripts/angular.js" />
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="utf-8" />
+    <title>TypeScr</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript" src="Scripts/angular-1.5.5/angular.js">
+    </script>
+    <script type="text/javascript" src="Scripts/angular-1.5.5/angular-animate.js">
+    </script>
+    <script type="text/javascript" src="Scripts/angular-1.5.5/angular-sanitize.js">
+    </script>
+    <script src="Scripts/angular-1.5.5/angular-ui-router.js"></script>
+    <script src="Scripts/bootstrap-3.3.7/css/bootstrap.js"></script>
+    <script src="Scripts/angular-1.5.5/ui-bootstrap-tpls-2.5.0.js"></script>
+    <script type="text/javascript" src="TypeScr.js">
+    </script>
+    <link href="Scripts\bootstrap-3.3.7\css\bootstrap.css" rel="stylesheet">
+    <link href="Scripts\bootstrap-3.3.7\css\bootstrap-theme.css" rel="stylesheet">
+    <link rel="stylesheet" href="TypeScr.css">
+</head>
+
+<body ng-app="TypeScr">
+    <div>
+
+    </div>
+    <div ng-controller="ContactUsWrapperCtrl  as $ctrl" style="float:'right';">
+        <button class="dropbtn" ng-click="$ctrl.open('lg')">Contact US</button>
+    </div>
+    <div class="topnav" id="myTopnav">
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-mouseenter="homeoption=true" ui-sref="home">Home</button>
+            <div class="dropdown-content" ng-show="homeoption" ng-mouseleave="homeoption=false">
+                <ul>
+                    <li>
+                        <a href="#">Link 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 2</a>
+                    </li>
+                    <li>
+                        <a href="#">Link 3</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-mouseenter="Productsoption=true" ng-mouseleave="Productsoption=false">Products</button>
+            <div class="dropdown-content" ng-show="Productsoption">
+                <ul>
+                    <li>
+                        <a href="#">Products 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Products 2</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-mouseenter="Newsoption=true" ng-mouseleave="Newsoption=false">News</button>
+            <div class="dropdown-content" ng-show="Newsoption">
+                <ul>
+                    <li>
+                        <a href="#">News 1</a>
+                    </li>
+                    <li>
+                        <a href="#">News 2</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-click="$ctrl.open('lg')">Contact</button>
+            <div class="dropdown-content" ng-show="Contactoption">
+                <ul>
+                    <li>
+                        <a href="#">Contact 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Contact 2</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-mouseenter="Aboutoption=true" ng-mouseleave="Aboutoption=false" ui-sref="about">About</button>
+            <div class="dropdown-content" ng-show="Aboutoption">
+                <ul>
+                    <li>
+                        <a href="#">About 1</a>
+                    </li>
+                    <li>
+                        <a href="#">About 2</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+        <div class="dropdown" style="float:left;">
+            <button class="dropbtn" ng-mouseenter="Careeroption=true" ng-mouseleave="Careeroption=false">Career</button>
+            <div class="dropdown-content" ng-show="Careeroption">
+                <ul>
+                    <li>
+                        <a href="#">Career 1</a>
+                    </li>
+                    <li>
+                        <a href="#">Career 2</a>
+                    </li>
+
+                </ul>
+            </div>
+        </div>
+
+    </div>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+
+</body>
+
+</html>
